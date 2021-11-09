@@ -13,10 +13,12 @@ import {
   LiveChannelConfig,
   LiveChannelConnectionState,
   LiveChannelEvent,
+  LiveChannelId,
   LiveChannelPresenceStatus,
   LoadingState,
   StreamingDataFrame,
   toDataFrameDTO,
+  toLiveChannelId,
 } from '@grafana/data';
 import { CentrifugeLiveChannel } from './channel';
 
@@ -53,8 +55,14 @@ export interface CentrifugeSrv {
   getPresence(address: LiveChannelAddress, config: LiveChannelConfig): Promise<LiveChannelPresenceStatus>;
 }
 
+type CancellationToken = {
+  cancelled: boolean;
+};
+
 export class CentrifugeService implements CentrifugeSrv {
   readonly open = new Map<string, CentrifugeLiveChannel>();
+  private readonly framesByChannelId = new Map<LiveChannelId, StreamingDataFrame>();
+  private readonly unsubscribeCancellationTokensByChannelId = new Map<LiveChannelId, CancellationToken>();
   readonly centrifuge: Centrifuge;
   readonly connectionState: BehaviorSubject<boolean>;
   readonly connectionBlocker: Promise<void>;
@@ -168,16 +176,20 @@ export class CentrifugeService implements CentrifugeSrv {
    */
   getDataStream(options: LiveDataStreamOptions, config: LiveChannelConfig): Observable<DataQueryResponse> {
     return new Observable<DataQueryResponse>((subscriber) => {
+      const channelId = toLiveChannelId(options.addr);
+      this.unsubscribeCancellationTokensByChannelId.delete(channelId);
+
       const channel = this.getChannel(options.addr, config);
       const key = options.key ?? `xstr/${streamCounter++}`;
-      let data: StreamingDataFrame | undefined = undefined;
       let filtered: DataFrame | undefined = undefined;
       let state = LoadingState.Streaming;
       let lastWidth = -1;
 
       const process = (msg: DataFrameJSON) => {
+        let data = this.framesByChannelId.get(channelId);
         if (!data) {
-          data = new StreamingDataFrame(msg, options.buffer);
+          data = new StreamingDataFrame(msg, { ...options.buffer });
+          this.framesByChannelId.set(channelId, data);
         } else {
           data.push(msg);
         }
@@ -224,7 +236,7 @@ export class CentrifugeService implements CentrifugeSrv {
         error: (err: any) => {
           console.log('LiveQuery [error]', { err }, options.addr);
           state = LoadingState.Error;
-          subscriber.next({ state, data: [data], key, error: toDataQueryError(err) });
+          subscriber.next({ state, data: [this.framesByChannelId.get(channelId)], key, error: toDataQueryError(err) });
           sub.unsubscribe(); // close after error
         },
         complete: () => {
@@ -246,7 +258,7 @@ export class CentrifugeService implements CentrifugeSrv {
               let error = toDataQueryError(evt.error);
               error.message = `Streaming channel error: ${error.message}`;
               state = LoadingState.Error;
-              subscriber.next({ state, data: [data], key, error });
+              subscriber.next({ state, data: [this.framesByChannelId.get(channelId)], key, error });
               return;
             } else if (
               evt.state === LiveChannelConnectionState.Connected ||
@@ -263,7 +275,18 @@ export class CentrifugeService implements CentrifugeSrv {
       });
 
       return () => {
-        sub.unsubscribe();
+        this.unsubscribeCancellationTokensByChannelId.set(channelId, {
+          cancelled: false,
+        });
+
+        setTimeout(() => {
+          const token = this.unsubscribeCancellationTokensByChannelId.get(channelId);
+          if (token && !token.cancelled) {
+            this.framesByChannelId.delete(channelId);
+            this.unsubscribeCancellationTokensByChannelId.delete(channelId);
+            sub.unsubscribe();
+          }
+        }, 5000);
       };
     });
   }
