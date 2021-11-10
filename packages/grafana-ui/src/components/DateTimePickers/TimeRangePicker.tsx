@@ -1,4 +1,6 @@
 // Libraries
+import { t } from 'ttag';
+
 import React, { PureComponent, memo, FormEvent } from 'react';
 import { css } from '@emotion/css';
 
@@ -151,7 +153,7 @@ export class UnthemedTimeRangePicker extends PureComponent<TimeRangePickerProps,
 
 const ZoomOutTooltip = () => (
   <>
-    Time range zoom out <br /> CTRL+Z
+    {t`Time range zoom out`} <br /> CTRL+Z
   </>
 );
 

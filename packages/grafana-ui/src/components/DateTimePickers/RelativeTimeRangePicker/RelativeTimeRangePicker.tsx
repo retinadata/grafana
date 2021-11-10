@@ -1,3 +1,5 @@
+import { t } from 'ttag';
+
 import React, { FormEvent, ReactElement, useCallback, useState } from 'react';
 import { css, cx } from '@emotion/css';
 import { RelativeTimeRange, GrafanaTheme2, TimeOption } from '@grafana/data';
@@ -107,7 +109,7 @@ export function RelativeTimeRangePicker(props: RelativeTimeRangePickerProps): Re
             <div className={styles.body}>
               <CustomScrollbar className={styles.leftSide} hideHorizontalTrack>
                 <TimeRangeList
-                  title="Example time ranges"
+                  title={t`Example time ranges`}
                   options={validOptions}
                   onChange={onChangeTimeOption}
                   value={timeOption}
@@ -115,7 +117,7 @@ export function RelativeTimeRangePicker(props: RelativeTimeRangePickerProps): Re
               </CustomScrollbar>
               <div className={styles.rightSide}>
                 <div className={styles.title}>
-                  <TimePickerTitle>Specify time range</TimePickerTitle>
+                  <TimePickerTitle>{t`Specify time range`}</TimePickerTitle>
                   <div className={styles.description}>
                     Specify a relative time range, for more information see{' '}
                     <a href="https://grafana.com/docs/grafana/latest/dashboards/time-range-controls/">
@@ -124,7 +126,7 @@ export function RelativeTimeRangePicker(props: RelativeTimeRangePickerProps): Re
                     .
                   </div>
                 </div>
-                <Field label="From" invalid={!from.validation.isValid} error={from.validation.errorMessage}>
+                <Field label={t`From`} invalid={!from.validation.isValid} error={from.validation.errorMessage}>
                   <Input
                     onClick={(event) => event.stopPropagation()}
                     onBlur={() => setFrom({ ...from, validation: isRangeValid(from.value) })}
@@ -132,7 +134,7 @@ export function RelativeTimeRangePicker(props: RelativeTimeRangePickerProps): Re
                     value={from.value}
                   />
                 </Field>
-                <Field label="To" invalid={!to.validation.isValid} error={to.validation.errorMessage}>
+                <Field label={t`To`} invalid={!to.validation.isValid} error={to.validation.errorMessage}>
                   <Input
                     onClick={(event) => event.stopPropagation()}
                     onBlur={() => setTo({ ...to, validation: isRangeValid(to.value) })}
@@ -141,7 +143,7 @@ export function RelativeTimeRangePicker(props: RelativeTimeRangePickerProps): Re
                   />
                 </Field>
                 <Button aria-label="TimePicker submit button" onClick={onApply}>
-                  Apply time range
+                  {t`Apply time range`}
                 </Button>
               </div>
             </div>

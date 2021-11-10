@@ -523,7 +523,11 @@ func (hs *HTTPServer) Index(c *models.ReqContext) {
 		c.Handle(hs.Cfg, 500, "Failed to get settings", err)
 		return
 	}
-	c.HTML(200, "index", data)
+	if strings.Contains(c.Req.URL.RawQuery, "&tr") {
+		c.HTML(200, "index_tr", data)
+	} else {
+		c.HTML(200, "index", data)
+	}
 }
 
 func (hs *HTTPServer) NotFoundHandler(c *models.ReqContext) {

@@ -36,7 +36,8 @@ export class KeybindingSrv {
   }
 
   initGlobals() {
-    if (locationService.getLocation().pathname !== '/login') {
+    // Unbind keyboard shortcuts with `&& false`
+    if (locationService.getLocation().pathname !== '/login' && false) {
       this.bind(['?', 'h'], this.showHelpModal);
       this.bind('g h', this.goToHome);
       this.bind('g a', this.openAlerting);
@@ -47,8 +48,8 @@ export class KeybindingSrv {
       this.bindGlobal('esc', this.globalEsc);
     }
 
-    this.bind('t t', () => toggleTheme(false));
-    this.bind('t r', () => toggleTheme(true));
+    // this.bind('t t', () => toggleTheme(false));
+    // this.bind('t r', () => toggleTheme(true));
   }
 
   private globalEsc() {

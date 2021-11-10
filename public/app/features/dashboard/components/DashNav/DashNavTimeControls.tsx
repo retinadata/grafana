@@ -1,4 +1,6 @@
 // Libraries
+import { t } from 'ttag';
+
 import React, { Component } from 'react';
 import { dateMath, TimeRange, TimeZone } from '@grafana/data';
 
@@ -99,7 +101,7 @@ export class DashNavTimeControls extends Component<Props> {
           onRefresh={this.onRefresh}
           value={dashboard.refresh}
           intervals={intervals}
-          tooltip="Refresh dashboard"
+          tooltip={t`Refresh dashboard`}
           noIntervalPicker={hideIntervalPicker}
         />
       </ToolbarButtonRow>

@@ -1,3 +1,5 @@
+import { t } from 'ttag';
+
 import moment from 'moment-timezone';
 import { memoize } from 'lodash';
 import { TimeZone } from '../types';
@@ -12,7 +14,7 @@ export enum InternalTimeZones {
 export const timeZoneFormatUserFriendly = (timeZone: TimeZone | undefined) => {
   switch (getTimeZone({ timeZone })) {
     case 'browser':
-      return 'Local browser time';
+      return t`Local browser time`;
     case 'utc':
       return 'UTC';
     default:
@@ -118,7 +120,7 @@ const mapInternal = (zone: string, timestamp: number): TimeZoneInfo | undefined 
         offsetInMins: 0,
         ...info,
         ianaName: (info as TimeZoneInfo).ianaName,
-        name: 'Default',
+        name: t`Default`,
         zone,
       };
     }
@@ -129,10 +131,10 @@ const mapInternal = (zone: string, timestamp: number): TimeZoneInfo | undefined 
 
       return {
         countries: countriesByTimeZone[tz] ?? [],
-        abbreviation: 'Your local time',
+        abbreviation: t`Your local time`,
         offsetInMins: new Date().getTimezoneOffset(),
         ...info,
-        name: 'Browser Time',
+        name: t`Browser Time`,
         ianaName: (info as TimeZoneInfo).ianaName,
         zone,
       };

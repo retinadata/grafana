@@ -342,6 +342,7 @@ func (hs *HTTPServer) addMiddlewaresAndStaticRoutes() {
 	m.Use(middleware.Recovery(hs.Cfg))
 
 	hs.mapStatic(m, hs.Cfg.StaticRootPath, "build", "public/build")
+	hs.mapStatic(m, hs.Cfg.StaticRootPath, "build_tr", "public/build_tr")
 	hs.mapStatic(m, hs.Cfg.StaticRootPath, "", "public")
 	hs.mapStatic(m, hs.Cfg.StaticRootPath, "robots.txt", "robots.txt")
 
@@ -458,6 +459,12 @@ func (hs *HTTPServer) mapStatic(m *macaron.Macaron, rootDir string, dir string, 
 	}
 
 	if prefix == "public/build" {
+		headers = func(c *macaron.Context) {
+			c.Resp.Header().Set("Cache-Control", "public, max-age=31536000")
+		}
+	}
+
+	if prefix == "public/build_tr" {
 		headers = func(c *macaron.Context) {
 			c.Resp.Header().Set("Cache-Control", "public, max-age=31536000")
 		}

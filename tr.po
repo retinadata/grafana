@@ -1,0 +1,336 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:13
+msgid "second"
+msgstr "saniye"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:14
+msgid "minute"
+msgstr "dakika"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:15
+msgid "hour"
+msgstr "saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:16
+msgid "day"
+msgstr "gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:17
+msgid "week"
+msgstr "hafta"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:18
+msgid "month"
+msgstr "ay"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:19
+msgid "year"
+msgstr "yıl"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:23
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:30
+msgid "Today"
+msgstr "Son 1 gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:24
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:31
+msgid "Today so far"
+msgstr "Bugün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:25
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:32
+msgid "This week"
+msgstr "Son 1 hafta"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:26
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:33
+msgid "This week so far"
+msgstr "Bu hafta"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:27
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:34
+msgid "This month"
+msgstr "Son 1 ay"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:28
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:35
+msgid "This month so far"
+msgstr "Bu ay"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:29
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:36
+msgid "This year"
+msgstr "Son 1 yıl"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:30
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:37
+msgid "This year so far"
+msgstr "Bu yıl"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:32
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:24
+msgid "Yesterday"
+msgstr "Dün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:33
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:25
+msgid "Day before yesterday"
+msgstr "Evvelsi gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:34
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:26
+msgid "This day last week"
+msgstr "Geçen hafta bugün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:35
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:27
+msgid "Previous week"
+msgstr "Önceki hafta"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:36
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:28
+msgid "Previous month"
+msgstr "Önceki ay"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:37
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:29
+msgid "Previous year"
+msgstr "Önceki yıl"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:39
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:5
+msgid "Last 5 minutes"
+msgstr "Son 5 dakika"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:40
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:6
+msgid "Last 15 minutes"
+msgstr "Son 15 dakika"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:41
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:7
+msgid "Last 30 minutes"
+msgstr "Son 30 dakika"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:42
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:8
+msgid "Last 1 hour"
+msgstr "Son 1 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:43
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:9
+msgid "Last 3 hours"
+msgstr "Son 3 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:44
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:10
+msgid "Last 6 hours"
+msgstr "Son 6 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:45
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:11
+msgid "Last 12 hours"
+msgstr "Son 12 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:46
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:12
+msgid "Last 24 hours"
+msgstr "Son 24 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:47
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:13
+msgid "Last 2 days"
+msgstr "Son 2 gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:48
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:14
+msgid "Last 7 days"
+msgstr "Son 7 gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:49
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:15
+msgid "Last 30 days"
+msgstr "Son 30 gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:50
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:16
+msgid "Last 90 days"
+msgstr "Son 90 gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:51
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:17
+msgid "Last 6 months"
+msgstr "Son 6 ay"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:52
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:18
+msgid "Last 1 year"
+msgstr "Son 1 yıl"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:53
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:19
+msgid "Last 2 years"
+msgstr "Son 2 yıl"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:54
+#: packages\grafana-ui\src\components\TimePicker\rangeOptions.ts:20
+msgid "Last 5 years"
+msgstr "Son 5 yıl"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:58
+msgid "Next minute"
+msgstr "Sonraki 1 dakika"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:59
+msgid "Next 5 minutes"
+msgstr "Sonraki 5 dakika"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:60
+msgid "Next 15 minutes"
+msgstr "Sonraki 15 dakika"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:61
+msgid "Next 30 minutes"
+msgstr "Sonraki 30 dakika"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:62
+msgid "Next hour"
+msgstr "Sonraki 1 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:63
+msgid "Next 3 hours"
+msgstr "Sonraki 3 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:64
+msgid "Next 6 hours"
+msgstr "Sonraki 6 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:65
+msgid "Next 12 hours"
+msgstr "Sonraki 12 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:66
+msgid "Next 24 hours"
+msgstr "Sonraki 24 saat"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:67
+msgid "Next 2 days"
+msgstr "Sonraki 2 gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:68
+msgid "Next 7 days"
+msgstr "Sonraki 7 gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:69
+msgid "Next 30 days"
+msgstr "Sonraki 30 gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:70
+msgid "Next 90 days"
+msgstr "Sonraki 90 gün"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:71
+msgid "Next 6 months"
+msgstr "Sonraki 6 ay"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:72
+msgid "Next year"
+msgstr "Sonraki yıl"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:73
+msgid "Next 2 years"
+msgstr "Sonraki 2 yıl"
+
+#: packages\grafana-data\src\datetime\rangeutil.ts:74
+msgid "Next 5 years"
+msgstr "Sonraki 5 yıl"
+
+#: packages\grafana-ui\src\components\TimePicker\TimeRangePicker\TimePickerContent.tsx:189
+msgid "Relative time ranges"
+msgstr "Göreceli zaman aralığı"
+
+#: packages\grafana-ui\src\components\TimePicker\TimeRangePicker\TimePickerContent.tsx:196
+msgid "Other quick ranges"
+msgstr "Kolay zaman aralığı"
+
+#: packages\grafana-ui\src\components\TimePicker\TimeRangePicker\TimePickerContent.tsx:249
+#: packages\grafana-ui\src\components\TimePicker\TimeRangePicker\TimePickerContent.tsx:284
+msgid "Absolute time range"
+msgstr "Kesin zaman aralığı"
+
+#: packages\grafana-ui\src\components\TimePicker\TimeRangePicker\TimePickerContent.tsx:260
+#: packages\grafana-ui\src\components\TimePicker\TimeRangePicker\TimePickerContent.tsx:297
+msgid "Recently used absolute ranges"
+msgstr "Son kullanılan kesin zaman aralıkları"
+
+#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimeRangeForm.tsx:123
+#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimePickerCalendar.tsx:287
+#: packages/grafana-ui/src/components/DateTimePickers/RelativeTimeRangePicker/RelativeTimeRangePicker.tsx:146
+msgid "Apply time range"
+msgstr "Zaman aralığı seç"
+
+#: public/app/features/dashboard/components/DashNav/DashNavTimeControls.tsx:104
+msgid "Refresh dashboard"
+msgstr "Paneli yenile"
+
+#: packages/grafana-ui/src/components/DateTimePickers/RelativeTimeRangePicker/RelativeTimeRangePicker.tsx:120
+msgid "Specify time range"
+msgstr "Zaman aralığı belirle"
+
+#: packages/grafana-data/src/datetime/timezones.ts:123
+msgid "Default"
+msgstr "Varsayılan"
+
+#: packages/grafana-data/src/datetime/timezones.ts:134
+msgid "Your local time"
+msgstr "Yerel saatinizle"
+
+#: packages/grafana-data/src/datetime/timezones.ts:137
+msgid "Browser time"
+msgstr "Tarayıcı saatiyle"
+
+#: packages/grafana-data/src/datetime/timezones.ts:17
+msgid "Local browser time"
+msgstr "Tarayıcı yerel saatiyle"
+
+#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker.tsx:156
+msgid "Time range zoom out"
+msgstr "Zaman aralığını arttır"
+
+#: packages/grafana-ui/src/components/DateTimePickers/RelativeTimeRangePicker/RelativeTimeRangePicker.tsx:129
+#: packages/grafana-ui/src/components/ValueMappingsEditor/ValueMappingEditRow.tsx:140
+msgid "From"
+msgstr "Başlangıç"
+
+#: packages/grafana-ui/src/components/DateTimePickers/RelativeTimeRangePicker/RelativeTimeRangePicker.tsx:137
+#: packages/grafana-ui/src/components/ValueMappingsEditor/ValueMappingEditRow.tsx:147
+msgid "To"
+msgstr "Bitiş"
+
+#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimePickerFooter.tsx:81
+msgid "Change time zone"
+msgstr "Saat dilimini değiştir"
+
+#: packages/grafana-ui/src/components/DateTimePickers/RelativeTimeRangePicker/RelativeTimeRangePicker.tsx:112
+msgid "Example time ranges"
+msgstr "Örnek zaman aralıkları"
+
+#: packages/grafana-ui/src/components/DateTimePickers/TimeZonePicker.tsx:50
+msgid "Type to search (country, city, abbreviation)"
+msgstr "Arama için ülke, şehir ya da kısaltma gir"
+
+#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimePickerContent.tsx:316
+msgid "It looks like you haven&apos;t used this time picker before. As soon as you enter some time intervals, recently used intervals will appear here."
+msgstr "Bu menüyü ilk kez kullanıyorsunuz. Zaman aralığı seçerken kullanılan kısaltmalar: Şimdi(now), saniye(s), dakika(m), saat(h), gün(d), hafta(w), ay(M), yıl(Y)."
+
+#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimePickerContent.tsx:325
+msgid "Read the documentation"
+msgstr "Ayrıntılı dokümentasyonu"
+
+#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimePickerContent.tsx:327
+msgid "to find out more about how to enter custom time ranges."
+msgstr "kullanarak özel zamanlığı girme yöntemlerini inceleyebilirsiniz."

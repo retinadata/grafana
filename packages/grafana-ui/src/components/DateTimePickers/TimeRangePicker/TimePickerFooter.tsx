@@ -1,3 +1,5 @@
+import { t } from 'ttag';
+
 import React, { FC, useState, useCallback } from 'react';
 import { css, cx } from '@emotion/css';
 import { TimeZone, GrafanaTheme2, getTimeZoneInfo } from '@grafana/data';
@@ -76,7 +78,7 @@ export const TimePickerFooter: FC<Props> = (props) => {
       </div>
       <div className={style.spacer} />
       <Button variant="secondary" onClick={onToggleChangeTz} size="sm">
-        Change time zone
+        {t`Change time zone`}
       </Button>
     </section>
   );

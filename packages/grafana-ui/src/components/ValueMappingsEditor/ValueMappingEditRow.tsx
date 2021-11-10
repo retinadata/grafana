@@ -1,3 +1,5 @@
+import { t } from 'ttag';
+
 import React, { useCallback, useEffect, useRef } from 'react';
 import { Input } from '../Input/Input';
 import { GrafanaTheme2, MappingType, SpecialValueMatch, SelectableValue, ValueMappingResult } from '@grafana/data';
@@ -135,14 +137,14 @@ export function ValueMappingEditRow({ mapping, index, onChange, onRemove, onDupl
                   value={mapping.from ?? ''}
                   placeholder="Range start"
                   onChange={onChangeFrom}
-                  prefix="From"
+                  prefix={t`From`}
                 />
                 <Input
                   type="number"
                   value={mapping.to ?? ''}
                   placeholder="Range end"
                   onChange={onChangeTo}
-                  prefix="To"
+                  prefix={t`To`}
                 />
               </div>
             )}

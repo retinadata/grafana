@@ -43,7 +43,9 @@
     "typecheck": "tsc --noEmit && yarn run packages:typecheck",
     "plugins:build-bundled": "grafana-toolkit plugin:bundle-managed",
     "watch": "yarn start -d watch,start core:start --watchTheme",
-    "ci:test-frontend": "yarn run prettier:check && yarn run typecheck && yarn run lint && yarn run test:ci && yarn grafana-toolkit node-version-check && ./scripts/ci-check-strict.sh"
+    "ci:test-frontend": "yarn run prettier:check && yarn run typecheck && yarn run lint && yarn run test:ci && yarn grafana-toolkit node-version-check && ./scripts/ci-check-strict.sh",
+    "build:ru": "webpack --progress --config scripts/webpack/webpack.prod.js --env.locale=ru",
+    "build:tr": "webpack --progress --config scripts/webpack/webpack.prod.js --env.locale=tr"
   },
   "grafana": {
     "whatsNewUrl": "https://grafana.com/docs/grafana/next/whatsnew/whats-new-in-v8-1/",
@@ -143,6 +145,7 @@
     "babel-jest": "26.6.3",
     "babel-loader": "8.2.2",
     "babel-plugin-angularjs-annotate": "0.10.0",
+    "babel-plugin-ttag": "1.7.30",
     "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "6.4.1",
     "css-loader": "3.4.2",
@@ -206,6 +209,7 @@
     "ts-jest": "26.4.4",
     "ts-node": "9.0.0",
     "tslib": "2.2.0",
+    "ttag-cli": "1.9.3",
     "typescript": "4.3.4",
     "webpack": "4.41.5",
     "webpack-bundle-analyzer": "3.6.0",
@@ -301,6 +305,7 @@
     "tether": "1.4.7",
     "tether-drop": "https://github.com/torkelo/drop",
     "tinycolor2": "1.4.1",
+    "ttag": "1.7.24",
     "uuid": "8.3.0",
     "visjs-network": "4.25.0",
     "whatwg-fetch": "3.1.0"

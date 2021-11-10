@@ -1,3 +1,5 @@
+import { t } from 'ttag';
+
 import {
   dateMath,
   DateTime,
@@ -96,8 +98,8 @@ export const TimeRangeForm: React.FC<Props> = (props) => {
   const icon = isFullscreen ? null : <Button icon="calendar-alt" variant="secondary" onClick={onOpen} />;
 
   return (
-    <div aria-label="Absolute time ranges">
-      <Field label="From" invalid={from.invalid} error={from.errorMessage}>
+    <div aria-label={t`Absolute time ranges`}>
+      <Field label={t`From`} invalid={from.invalid} error={from.errorMessage}>
         <Input
           onClick={(event) => event.stopPropagation()}
           onFocus={onFocus}
@@ -107,7 +109,7 @@ export const TimeRangeForm: React.FC<Props> = (props) => {
           value={from.value}
         />
       </Field>
-      <Field label="To" invalid={to.invalid} error={to.errorMessage}>
+      <Field label={t`To`} invalid={to.invalid} error={to.errorMessage}>
         <Input
           onClick={(event) => event.stopPropagation()}
           onFocus={onFocus}
@@ -118,7 +120,7 @@ export const TimeRangeForm: React.FC<Props> = (props) => {
         />
       </Field>
       <Button data-testid={selectors.components.TimePicker.applyTimeRange} onClick={onApply}>
-        Apply time range
+        {t`Apply time range`}
       </Button>
 
       <TimePickerCalendar

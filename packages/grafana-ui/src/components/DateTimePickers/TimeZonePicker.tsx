@@ -1,3 +1,5 @@
+import { t } from 'ttag';
+
 import React, { useMemo, useCallback } from 'react';
 import { toLower, isEmpty, isString } from 'lodash';
 import {
@@ -45,7 +47,7 @@ export const TimeZonePicker: React.FC<Props> = (props) => {
     <Select
       menuShouldPortal
       value={selected}
-      placeholder="Type to search (country, city, abbreviation)"
+      placeholder={t`Type to search (country, city, abbreviation)`}
       autoFocus={autoFocus}
       openMenuOnFocus={true}
       width={width}
