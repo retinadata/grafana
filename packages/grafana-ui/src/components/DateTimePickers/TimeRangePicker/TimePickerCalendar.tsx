@@ -270,7 +270,7 @@ export const Body = memo<Props>(({ onChange, from, to, timeZone }) => {
       nextLabel={<Icon name="angle-right" />}
       prevLabel={<Icon name="angle-left" />}
       onChange={onCalendarChange}
-      locale="en"
+      locale={t`en`}
     />
   );
 });

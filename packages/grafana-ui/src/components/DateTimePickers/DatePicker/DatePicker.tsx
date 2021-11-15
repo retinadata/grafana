@@ -1,3 +1,5 @@
+import { t } from 'ttag';
+
 import React, { memo } from 'react';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { css } from 'emotion';
@@ -50,7 +52,7 @@ const Body = memo<DatePickerProps>(({ value, onChange }) => {
           onChange(ev);
         }
       }}
-      locale="en"
+      locale={t`en`}
     />
   );
 });

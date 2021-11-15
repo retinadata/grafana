@@ -334,3 +334,9 @@ msgstr "Ayrıntılı dokümentasyonu"
 #: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimePickerContent.tsx:327
 msgid "to find out more about how to enter custom time ranges."
 msgstr "kullanarak özel zamanlığı girme yöntemlerini inceleyebilirsiniz."
+
+#: packages/grafana-ui/src/components/DateTimePickers/DatePicker/DatePicker.tsx:55
+#: packages/grafana-ui/src/components/DateTimePickers/DateTimePicker/DateTimePicker.tsx:190
+#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimePickerCalendar.tsx:273
+msgid "en"
+msgstr "tr"

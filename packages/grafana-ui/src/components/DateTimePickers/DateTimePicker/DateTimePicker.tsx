@@ -1,3 +1,5 @@
+import { t } from 'ttag';
+
 import React, { FC, FormEvent, ReactNode, useCallback, useEffect, useState } from 'react';
 import { useMedia } from 'react-use';
 import Calendar from 'react-calendar/dist/entry.nostyle';
@@ -185,7 +187,7 @@ const DateTimeCalendar: FC<DateTimeCalendarProps> = ({ date, onClose, onChange, 
         nextLabel={<Icon name="angle-right" />}
         prevLabel={<Icon name="angle-left" />}
         onChange={onChangeDate}
-        locale="en"
+        locale={t`en`}
         className={calendarStyles.body}
         tileClassName={calendarStyles.title}
       />
