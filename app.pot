@@ -3,6 +3,22 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
+#: packages/grafana-data/src/datetime/timezones.ts:17
+msgid "Local browser time"
+msgstr ""
+
+#: packages/grafana-data/src/datetime/timezones.ts:123
+msgid "Default"
+msgstr ""
+
+#: packages/grafana-data/src/datetime/timezones.ts:134
+msgid "Your local time"
+msgstr ""
+
+#: packages/grafana-data/src/datetime/timezones.ts:137
+msgid "Browser Time"
+msgstr ""
+
 #: packages/grafana-data/src/datetime/rangeutil.ts:13
 msgid "second"
 msgstr ""
@@ -249,22 +265,6 @@ msgstr ""
 msgid "Next 5 years"
 msgstr ""
 
-#: packages/grafana-data/src/datetime/timezones.ts:17
-msgid "Local browser time"
-msgstr ""
-
-#: packages/grafana-data/src/datetime/timezones.ts:123
-msgid "Default"
-msgstr ""
-
-#: packages/grafana-data/src/datetime/timezones.ts:134
-msgid "Your local time"
-msgstr ""
-
-#: packages/grafana-data/src/datetime/timezones.ts:137
-msgid "Browser Time"
-msgstr ""
-
 #: packages/grafana-ui/src/components/DateTimePickers/RelativeTimeRangePicker/RelativeTimeRangePicker.tsx:112
 msgid "Example time ranges"
 msgstr ""
@@ -327,12 +327,12 @@ msgstr ""
 msgid "to find out more about how to enter custom time ranges."
 msgstr ""
 
-#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimeRangeForm.tsx:101
-msgid "Absolute time ranges"
-msgstr ""
-
 #: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimePickerFooter.tsx:81
 msgid "Change time zone"
+msgstr ""
+
+#: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimeRangeForm.tsx:101
+msgid "Absolute time ranges"
 msgstr ""
 
 #: packages/grafana-ui/src/components/DateTimePickers/TimeZonePicker.tsx:50

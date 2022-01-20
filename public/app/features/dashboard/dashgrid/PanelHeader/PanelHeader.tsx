@@ -86,7 +86,6 @@ const panelStyles = (theme: GrafanaTheme2) => {
       font-weight: ${theme.typography.fontWeightMedium};
       font-size: ${theme.typography.body.fontSize};
       margin: 0;
-
       &:hover {
         color: ${theme.colors.text.primary};
       }

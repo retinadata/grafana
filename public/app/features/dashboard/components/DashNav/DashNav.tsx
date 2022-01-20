@@ -4,16 +4,13 @@ import { connect, MapDispatchToProps } from 'react-redux';
 // Utils & Services
 import { playlistSrv } from 'app/features/playlist/PlaylistSrv';
 // Components
-import { DashNavButton } from './DashNavButton';
 import { DashNavTimeControls } from './DashNavTimeControls';
 import { ButtonGroup, ModalsController, ToolbarButton, PageToolbar } from '@grafana/ui';
-import { locationUtil, textUtil } from '@grafana/data';
 // State
 import { updateTimeZoneForSession } from 'app/features/profile/state/reducers';
 // Types
 import { DashboardModel } from '../../state';
 import { KioskMode, StoreState } from 'app/types';
-import { ShareModal } from 'app/features/dashboard/components/ShareModal';
 import { SaveDashboardModalProxy } from 'app/features/dashboard/components/SaveDashboard/SaveDashboardModalProxy';
 import { locationService } from '@grafana/runtime';
 import { toggleKioskMode } from 'app/core/navigation/kiosk';
@@ -105,49 +102,7 @@ class DashNav extends PureComponent<Props> {
   }
 
   renderLeftActionsButton() {
-    const { dashboard, kioskMode } = this.props;
-    const { canStar, canShare, isStarred } = dashboard.meta;
     const buttons: ReactNode[] = [];
-
-    if (kioskMode !== KioskMode.Off || this.isPlaylistRunning()) {
-      return [];
-    }
-
-    if (canStar) {
-      let desc = isStarred ? 'Unmark as favorite' : 'Mark as favorite';
-      buttons.push(
-        <DashNavButton
-          tooltip={desc}
-          icon={isStarred ? 'favorite' : 'star'}
-          iconType={isStarred ? 'mono' : 'default'}
-          iconSize="lg"
-          onClick={this.onStarDashboard}
-          key="button-star"
-        />
-      );
-    }
-
-    if (canShare) {
-      let desc = 'Share dashboard or panel';
-      buttons.push(
-        <ModalsController key="button-share">
-          {({ showModal, hideModal }) => (
-            <DashNavButton
-              tooltip={desc}
-              icon="share-alt"
-              iconSize="lg"
-              onClick={() => {
-                showModal(ShareModal, {
-                  dashboard,
-                  onDismiss: hideModal,
-                });
-              }}
-            />
-          )}
-        </ModalsController>
-      );
-    }
-
     this.addCustomContent(customLeftActions, buttons);
     return buttons;
   }
@@ -244,16 +199,11 @@ class DashNav extends PureComponent<Props> {
     const { isFullscreen, title, folderTitle } = this.props;
     const onGoBack = isFullscreen ? this.onClose : undefined;
 
-    const titleHref = locationUtil.updateSearchParams(window.location.href, '?search=open');
-    const parentHref = locationUtil.updateSearchParams(window.location.href, '?search=open&folder=current');
-
     return (
       <PageToolbar
         pageIcon={isFullscreen ? undefined : 'apps'}
         title={title}
         parent={folderTitle}
-        titleHref={titleHref}
-        parentHref={parentHref}
         onGoBack={onGoBack}
         leftItems={this.renderLeftActionsButton()}
       >

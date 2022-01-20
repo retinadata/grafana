@@ -3,10 +3,7 @@ import { css, cx } from '@emotion/css';
 import { GrafanaTheme2 } from '@grafana/data';
 import { useStyles2 } from '../../themes/ThemeContext';
 import { IconName } from '../../types';
-import { Icon } from '../Icon/Icon';
 import { styleMixins } from '../../themes';
-import { IconButton } from '../IconButton/IconButton';
-import { selectors } from '@grafana/e2e-selectors';
 import { Link } from '..';
 import { getFocusStyles } from '../../themes/mixins';
 
@@ -45,24 +42,6 @@ export const PageToolbar: FC<Props> = React.memo(
 
     return (
       <div className={mainStyle}>
-        {pageIcon && !onGoBack && (
-          <div className={styles.pageIcon}>
-            <Icon name={pageIcon} size="lg" aria-hidden />
-          </div>
-        )}
-        {onGoBack && (
-          <div className={styles.pageIcon}>
-            <IconButton
-              name="arrow-left"
-              tooltip="Go back (Esc)"
-              tooltipPlacement="bottom"
-              size="xxl"
-              surface="dashboard"
-              aria-label={selectors.components.BackButton.backArrow}
-              onClick={onGoBack}
-            />
-          </div>
-        )}
         <nav aria-label="Search links" className={styles.navElement}>
           {parent && parentHref && (
             <>
@@ -127,7 +106,7 @@ const getStyles = (theme: GrafanaTheme2) => {
     overflow: hidden;
     max-width: 240px;
     border-radius: 2px;
-
+    color: #b02e0c;
     @media ${styleMixins.mediaUp(theme.v1.breakpoints.xl)} {
       max-width: unset;
     }
