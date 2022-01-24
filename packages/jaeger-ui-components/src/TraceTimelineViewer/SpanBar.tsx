@@ -55,7 +55,7 @@ const getStyles = createStyle((theme: Theme) => {
       label: label;
       color: #aaa;
       font-size: 12px;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'Open Sans', Open Sans, Open Sans, sans-serif;
       line-height: 1em;
       white-space: nowrap;
       padding: 0 0.5em;
