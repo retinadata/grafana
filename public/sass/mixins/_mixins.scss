@@ -108,6 +108,11 @@
   @include box-sizing(border-box); // Makes inputs behave like true block-level elements
 }
 
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 // CSS3 PROPERTIES
 // --------------------------------------------------
 
