@@ -6,6 +6,8 @@ import { IconName } from '../../types';
 import { styleMixins } from '../../themes';
 import { Link } from '..';
 import { getFocusStyles } from '../../themes/mixins';
+import { IconButton } from '../IconButton/IconButton';
+import { selectors } from '@grafana/e2e-selectors';
 
 export interface Props {
   pageIcon?: IconName;
@@ -42,6 +44,19 @@ export const PageToolbar: FC<Props> = React.memo(
 
     return (
       <div className={mainStyle}>
+        {onGoBack && (
+          <div className={styles.pageIcon}>
+            <IconButton
+              name="arrow-left"
+              tooltip="Go back (Esc)"
+              tooltipPlacement="bottom"
+              size="xxl"
+              surface="dashboard"
+              aria-label={selectors.components.BackButton.backArrow}
+              onClick={onGoBack}
+            />
+          </div>
+        )}
         <nav aria-label="Search links" className={styles.navElement}>
           {parent && parentHref && (
             <>
