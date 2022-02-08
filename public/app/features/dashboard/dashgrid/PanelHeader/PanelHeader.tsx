@@ -79,7 +79,6 @@ const panelStyles = (theme: GrafanaTheme2) => {
   return {
     titleText: css`
       text-overflow: ellipsis;
-      overflow: hidden;
       white-space: nowrap;
       max-width: calc(100% - 38px);
       cursor: pointer;

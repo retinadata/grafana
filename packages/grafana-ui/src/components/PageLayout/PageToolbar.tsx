@@ -118,7 +118,6 @@ const getStyles = (theme: GrafanaTheme2) => {
     font-size: ${typography.size.lg};
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
     max-width: 240px;
     border-radius: 2px;
     color: #b02e0c;
@@ -152,7 +151,6 @@ const getStyles = (theme: GrafanaTheme2) => {
       display: flex;
       align-items: center;
       min-width: 0;
-      overflow: hidden;
     `,
     navElement: css`
       display: flex;
