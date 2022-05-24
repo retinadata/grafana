@@ -20,7 +20,6 @@ import {
 import { contextSrv } from '../core';
 import { getDatasourceSrv } from '../../features/plugins/datasource_srv';
 import { getTimeSrv } from '../../features/dashboard/services/TimeSrv';
-import { toggleTheme } from './toggleTheme';
 import { withFocusedPanel } from './withFocusedPanelId';
 import { HelpModal } from '../components/help/HelpModal';
 

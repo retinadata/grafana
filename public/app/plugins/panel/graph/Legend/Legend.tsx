@@ -1,3 +1,5 @@
+import { t } from 'ttag';
+
 import { sortBy as _sortBy } from 'lodash';
 import React, { PureComponent } from 'react';
 import { TimeSeries } from 'app/core/core';
@@ -318,9 +320,16 @@ class LegendTableHeaderItem extends PureComponent<LegendTableHeaderProps & Legen
 
   render() {
     const { statName, sort, sortDesc } = this.props;
+    const labelList = ['min', 'max', 'avg', 'current', 'total'];
+    const legendLabelText = [t`min`, t`max`, t`avg`, t`current`, t`total`];
+    var statNameFormatted = statName + '';
+    var labelIndex = labelList.indexOf(statName);
+    if (labelIndex > -1) {
+      statNameFormatted = legendLabelText[labelIndex];
+    }
     return (
       <th className="pointer" onClick={this.onClick}>
-        {statName}
+        {statNameFormatted}
         {sort === statName && <Icon name={sortDesc ? 'angle-down' : 'angle-up'} />}
       </th>
     );

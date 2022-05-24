@@ -340,3 +340,136 @@ msgstr "kullanarak özel zamanlığı girme yöntemlerini inceleyebilirsiniz."
 #: packages/grafana-ui/src/components/DateTimePickers/TimeRangePicker/TimePickerCalendar.tsx:273
 msgid "en"
 msgstr "tr"
+
+#: public/app/plugins/panel/graph/Legend/Legend.tsx:324
+msgid "min"
+msgstr "min"
+
+#: public/app/plugins/panel/graph/Legend/Legend.tsx:324
+msgid "max"
+msgstr "mak"
+
+#: public/app/plugins/panel/graph/Legend/Legend.tsx:324
+msgid "avg"
+msgstr "ort"
+
+#: public/app/plugins/panel/graph/Legend/Legend.tsx:324
+msgid "current"
+msgstr "güncel"
+
+#: public/app/plugins/panel/graph/Legend/Legend.tsx:324
+msgid "total"
+msgstr "toplam"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:131
+msgid "Last *"
+msgstr "Son *"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:132
+msgid "Last non-null value"
+msgstr "Son boş olmayan değer"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:139
+msgid "Last"
+msgstr "Son"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:140
+msgid "Last Value"
+msgstr "Son Değer"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:144
+#: packages/grafana-data/src/transformations/fieldReducer.ts:147
+msgid "First"
+msgstr "İlk"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:144
+msgid "First Value"
+msgstr "İlk Değer"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:148
+msgid "First non-null value"
+msgstr "İlk boş olmayan değer"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:152
+msgid "Min"
+msgstr "Min"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:152
+msgid "Minimum Value"
+msgstr "Minimum Değer"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:153
+msgid "Max"
+msgstr "Mak"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:153
+msgid "Maximum Value"
+msgstr "Maksimum Değer"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:154
+msgid "Mean"
+msgstr "Ort"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:154
+msgid "Average Value"
+msgstr "Ortalama Değer"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:157
+msgid "Total"
+msgstr "Toplam"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:158
+msgid "The sum of all values"
+msgstr "Tüm değerlerin toplamı"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:165
+msgid "Count"
+msgstr "Sayım"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:166
+msgid "Number of values in response"
+msgstr "Yanıtta gelen değer sayısı"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:172
+msgid "Range"
+msgstr "Aralık"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:173
+msgid "Difference between minimum and maximum values"
+msgstr "Minimum ve maksimum değerler arasındaki fark"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:179
+msgid "Cumulative change in value"
+msgstr "Değerlerdeki kümülatif fark"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:184
+msgid "Step"
+msgstr "Adım"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:185
+msgid "Minimum interval between values"
+msgstr "Değerler arası minimum aralık"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:190
+msgid "Difference"
+msgstr "Fark"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:191
+msgid "Difference between first and last values"
+msgstr "İlk ve son değer arasındaki fark"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:230
+msgid "Difference percent"
+msgstr "Yüzde fark"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:231
+msgid "Percentage difference between first and last values"
+msgstr "İlk ve son değer arasındaki yüzde fark"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:236
+msgid "All values"
+msgstr "Tüm değerler"
+
+#: packages/grafana-data/src/transformations/fieldReducer.ts:237
+msgid "Returns an array with all values"
+msgstr "Tüm değerleri içeren bir dizi verir"

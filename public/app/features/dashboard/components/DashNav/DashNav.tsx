@@ -130,7 +130,7 @@ class DashNav extends PureComponent<Props> {
   }
 
   renderRightActionsButton() {
-    const { dashboard, onAddPanel, isFullscreen, kioskMode } = this.props;
+    const { dashboard, onAddPanel, isFullscreen } = this.props;
     const { canEdit, showSettings } = dashboard.meta;
     const { snapshot } = dashboard;
     const snapshotUrl = snapshot && snapshot.originalUrl;
@@ -192,7 +192,7 @@ class DashNav extends PureComponent<Props> {
   }
 
   gotoSnapshotOrigin(snapshotUrl: string) {
-    window.location.href = textUtil.sanitizeUrl(snapshotUrl);
+    window.location.href = snapshotUrl;
   }
 
   render() {
